@@ -1,0 +1,53 @@
+<p>templatefrom works!</p>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-left rounded shadow py-5">
+
+            <div><h2>Simple Form</h2></div>
+
+            <form #myForm="ngForm"  (ngSubmit)="OnSubmit(myForm)">
+
+        <div ngModelGroup="userDetail" #userDetail="ngModelGroup" >
+                <div class="form-group">
+                    <label for="username">Full Name</label>
+                    <input required type="text" class="form-control" id="username" name="username"  ngModel placeholder="Enter username"  [(ngModel)]="username">
+                    <small  *ngIf="username">User name is :{{username}}</small>
+                </div>
+
+                <div class="form-group" >
+                    <label for="email">Email</label>
+                    <!-- <input email required type="email" class="form-control" id="email" name="email" [(ngModel)]="email" placeholder="Enter email" #email="ngModel"> -->
+                    <input email  required type="email" (input)="checkEmailValidity(email)" [(ngModel)]="email" class="form-control"  placeholder="Enter email" [(ngModel)]="email" id="email" name="email" />
+                    <div *ngIf="errorMessage">{{ errorMessage }}</div>
+                    <small class="text-danger" *ngIf="!email.valid || email.touched || errorMessage" >User can only able to insert 'codemindtechnology.com' domain </small>
+                </div>
+    
+        </div>    
+
+                <div class="form-group">
+                    <label for="course">Select Course</label>
+                    <select name="course" class="form-control" id="course" ngModel>
+                    <option [value]="course" *ngFor="let course of courseArr" >{{course}}</option>
+                    </select>
+                </div>
+
+                <div class="form-group" *ngFor="let gender of genders">
+                    <input type="radio" id="{{gender.id}}" name="gender"  value="{{gender.value}}"  class="custom-control-input" [ngModel]="defaultGenderValue" >
+                    <label for="{{gender.id}}" class="custom-control-label">{{gender.value}}</label>
+
+                </div>
+                <button type="submit" [disabled]="!myForm.valid && !isEmailAllowed(email)" class="btn btn-success">Submit</button>
+
+                 <div class="row justify-content-center" *ngIf="isSubmitted">
+                    <h2>Form Data</h2>
+                    <p>UserName: {{user.userName}}</p>
+                    <p>Email: {{user.email}}</p>
+                    <p>Course: {{user.course}}</p>
+                    <p>Gender: {{user.gender}}</p> 
+                 </div>   
+
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,57 @@
+<p>structer-directives works!</p>
+
+<ol>
+    <li>
+      <label> <input type="checkbox" [(ngModel)]="isChecked" /> Click Checkbox!</label>
+      <h5>After clicking  the cheackbox</h5>
+      <div *ngIf="isChecked"><p>This content is shown when the checkbox is checked.</p> </div>     
+    </li>
+    <li>
+      
+      <h2>Top 3  Programming Language Courses</h2>
+    <div *ngFor="let course of courses.slice(0, 3)">
+     <h3>{{ course.name }}</h3>  
+    </div>
+    </li>
+
+
+    <li>
+      <div [ngSwitch]="exampleValue">
+        <div *ngSwitchCase="'value1'">This is the first case.</div>
+        <div *ngSwitchCase="'value2'">This is the second case.</div>
+        <div *ngSwitchDefault>This is the default case.</div>
+      </div>
+    </li>
+  </ol>
+
+  <!-- <ul *ngFor="let p of people">
+    <li [ngClass]="{
+        'text-success'
+        
+    }">
+    {{p.name}} ({{p.country}})
+    </li>
+</ul>
+   -->
+
+   <h2 class="value">Select Our Country </h2>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <select class="from-control"(change)="getSelectedValue($event)">
+                <h4>-----Select a Country-----</h4>
+                <option value="Default">Select a Country</option>
+                <option value="India">India</option>
+                <option value="Aamerica">Aamerica</option>
+                <option value="Nepal">Nepal</option>
+            </select>
+
+            <div class="col-md-12" [ngSwitch]="selectedValue">
+                <h2 class="text-sucess" *ngSwitchCase="'India'"></h2>
+                    
+                <h2 class="text-sucess" *ngSwitchCase="'Aamerica'"></h2>
+    
+                <h2 class="text-sucess" *ngSwitchCase="'Nepal'"></h2>
+            </div>
+    </div>
+</div>

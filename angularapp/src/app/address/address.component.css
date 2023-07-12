@@ -1,0 +1,45 @@
+.form-margin{
+    margin-top: 150px;
+  }
+  
+  .vertical {
+      border-right: 1px solid rgb(204, 201, 201) ;
+      
+      height: 100%;
+    }
+  
+  
+  .button-design{
+      display: flex;
+      justify-content: space-between;
+      height: 35px;
+      text-align: center;
+      vertical-align: middle;
+      
+  }
+  
+  .button-design button {
+    line-height: normal;
+    vertical-align: middle;
+  }
+  
+  .text-white{
+    color: white
+    ;
+  }
+  
+  .icon{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .row-design{
+    background-color: #CFE2FF;
+    text-align: center;
+    
+  }
+  
+  .table-data{
+    text-align: center;
+  }

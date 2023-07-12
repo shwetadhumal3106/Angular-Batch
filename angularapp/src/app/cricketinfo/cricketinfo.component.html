@@ -1,0 +1,195 @@
+<!-- <h1>@cricbuzz API Assignment</h1>
+
+<div class="container border border-dark bg-light">
+
+    <table class="table">
+<thead>
+    <tr>
+        <th>sr.No</th>
+        <th>Match Id</th>
+        <th>Series Name</th>
+        <th>Match Format </th>
+        <th>State </th>
+        <th>Status </th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let match of matchesArr; index as i">
+        <td>{{i+1}}</td>
+        <td>{{match.matchId}}</td>
+        <td>{{match.seriesName}}</td>
+        <td>{{match.matchFormat}}</td>
+        <td>{{match.state}}</td>
+        <td>{{match.status}}</td>
+    </tr>
+</tbody>
+
+</table>
+</div> -->
+
+
+  <div class="container justify-content-center shadow " style="margin-top: 20px;">
+    <div class="mt-5">
+       <h2 class="text-center" style="color: blueviolet; margin-top: 40px; ">Cricbuzz API</h2>
+     </div>
+  <hr />
+  <div class="row" >
+        <div class="col" style="margin-left: 50px;">
+        <img src="data:image/jpeg;base64,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" alt="cricket" style="border-radius: 20px 10px;" />
+        </div>
+    <!-- <div class="col mt-3 border-1">
+      <div>
+        <table class="table" style="border: 1px">
+          <tr>
+            <td>Ground</td>
+            <td>
+              <b>{{ venue.ground }}</b>
+            </td>
+          </tr>
+          <tr>
+            <td>Ground Name</td>
+            <td>
+              <b>{{ venue.knownAs }}</b>
+            </td>
+          </tr>
+          <tr>
+            <td>Country</td>
+            <td>
+              <b>{{ venue.country }}</b>
+            </td>
+          </tr>
+          <tr>
+            <td>HomeTeam</td>
+            <td>
+              <b>{{ venue.city }}</b>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div> -->
+
+    <div class="col-md-7 ">
+      <div>
+          <h4 style="color:blue;">Match Information</h4>
+       </div>
+   
+     <table class="table " >
+   
+       <tr>
+         <td>Match Id</td>
+         <td><b>{{matchInfo.matchId}}</b></td>
+      </tr>
+      <tr>
+         <td>Series</td>
+         <td><b>{{matchInfo.series.name}}</b></td>
+      </tr>
+      <tr>
+         <td>Match Format</td>
+         <td><b>{{matchInfo.matchFormat}}</b></td>
+      </tr>
+      <tr>
+         <td>Match Year</td>
+         <td><b>{{matchInfo.year}}</b></td>
+      </tr>
+      <tr>
+         <td>Teams</td>
+         <td><b>{{team1.name}} vs {{team2.name}}</b></td>
+      </tr>
+      
+   </table>
+   
+ </div>
+  </div>
+  
+  <!-- match details start from here -->
+  <div class="row">
+  
+  
+  <!-- <div class="col-md-7 ">
+     <div>
+         <h4 style="color: blue;margin-left: 20px;" >Match Details</h4>
+      </div>
+  
+    <table class="table " style="margin-left: 40px;">
+  
+      <tr>
+        <td>Match Id</td>
+        <td><b>{{matchInfo.matchId}}</b></td>
+     </tr>
+     <tr>
+        <td>Series</td>
+        <td><b>{{matchInfo.series.name}}</b></td>
+     </tr>
+     <tr>
+        <td>Match Format</td>
+        <td><b>{{matchInfo.matchFormat}}</b></td>
+     </tr>
+     <tr>
+        <td>Match Year</td>
+        <td><b>{{matchInfo.year}}</b></td>
+     </tr>
+     <tr>
+        <td>Teams</td>
+        <td><b>{{team1.name}} vs {{team2.name}}</b></td>
+     </tr>
+     <tr>
+        <td>Match Status</td>
+        <td><h6 class="text-danger">{{matchInfo.status}} </h6>
+        </td>
+    </tr>
+  </table> -->
+  
+</div>
+  
+  <div class="">
+     
+     <!-- <div>
+     <h5 style="color: tomato;margin-left: 20px;">Team {{team1.name}} Details</h5>
+     </div> -->
+
+  
+  <!-- team 2 info -->
+<!-- <div class="">
+    <hr>
+    <div>
+        <h5 style="color: rgb(127, 224, 89);margin-left: 20px;">Team {{team1.name}} Details</h5>
+    </div>
+<div class="col-md-7 " style="margin-left: 60px;">
+   <table class="table table-striped">
+    <thead>
+       <tr>
+        <th>Player Id</th>
+        <th>Name</th>
+        <th>Team Name</th>
+        <th>Batting style</th>
+        <th>Role</th>
+    </thead>
+    <tbody>
+           <ng-container *ngFor="let t1 of team2.playerDetails">
+           <tr>
+               <td>{{t1.id}}</td>
+               <td>{{t1.fullName}}</td>
+               <td>{{t1.teamName}}</td>
+               <td>{{t1.battingStyle}}</td>
+               <td>{{t1.role}}</td>
+           </tr>
+       </ng-container>
+    </tbody>
+  </table>
+  </div>
+  </div> -->
+  <!-- match result stated here -->
+  
+  
+  <!-- <div >
+    <hr>
+      <h3 class="text-success" style="margin-left: 30px;">Result of the match</h3>
+  
+       <div class="" style="margin-left: 60px;">
+      <h6 class="text-danger">{{matchInfo.status}} </h6> -->
+      <!-- <h6>Man Of The match : <i>{{matchInfo.playersOfTheMatch[0].name}}</i> </h6> -->
+      <!-- </div>
+  </div>
+  </div>
+  
+  </div> -->

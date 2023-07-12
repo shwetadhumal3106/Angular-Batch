@@ -1,0 +1,121 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  
+    <h1 appCustom>
+      Welcome to {{ title }}!
+    </h1>
+    <h1> count value are {{count}}</h1>
+    <h1>Name is {{name.toUpperCase()}}</h1>
+  
+    <div>{{20+45}}</div>
+    
+    <div>{{getName()}}</div>
+  
+    <input (blur)="changeImage ($event)" [value]="imageURL">
+    <button (click)="show()">Click Me</button>
+    <div>
+    <img [src]="imageURL" class="imageClass">
+  </div>
+    <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+  </div>
+  <h2>Here are some links to help you start: </h2>
+  
+  
+  
+  <ul>
+    <li>
+      <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
+    </li>
+    <li>
+      <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
+    </li>
+    <li>
+      <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
+    </li>
+  </ul>
+  <p>Normal para</p>
+  <p appCustom>custom Directive para</p>
+  <!-- <app-ngstyle></app-ngstyle> -->
+  <!-- <app-directiveassign></app-directiveassign>
+  <app-templetformassig></app-templetformassig> -->
+  <!-- <app-myreactiveform></app-myreactiveform> -->
+  <!-- <app-templateregistrationform></app-templateregistrationform> -->
+  
+  <!--  -->
+  <!-- <app-countrstate></app-countrstate> -->
+    
+    
+   <!-- <app-templateform></app-templateform>
+   <app-reactiveform></app-reactiveform> -->
+  
+  <!-- <app-test></app-test>
+  <app-ngfor></app-ngfor>
+  
+  <app-test2></app-test2>
+  <app-databinding></app-databinding>
+  
+  
+  <app-ngswitch></app-ngswitch> -->
+  <!-- <button type="button" class="btn btn-primary">Primary</button>
+  <button type="button" class="btn btn-danger">Danger</button> -->
+   
+  <!-- <app-ngif></app-ngif> -->
+  <!-- <app-service1></app-service1>
+  <app-service2></app-service2> -->
+  <!-- <app-ngfor></app-ngfor>
+  
+  
+  <input type="date" [(ngModel)]="age">
+  
+  <button class="btn btn-primary" (click)="ageCalculator()">Calculate Age</button>
+  <button class="btn btn-success" (click)="getUserData()">GetUser Data</button>
+  
+  <p *ngIf="age">{{showAge}}</p> -->
+  <!-- <app-ngfor></app-ngfor>
+  
+  <app-post></app-post> -->
+  <!-- <app-todo></app-todo> -->
+  <!-- <app-gif></app-gif> -->
+  
+   <nav>
+    <ul class="nav nav-tabs">
+      <li class="nav-item"><a routerLinkActive ="active" routerLink="about-us" class="nav-link">About Us</a></li>
+      <li class="nav-item"><a routerLinkActive ="active" routerLink="contact-us" class="nav-link">Contact Us</a></li>
+      <li class="nav-item"><a routerLinkActive ="active" routerLink="product" class="nav-link">Product</a></li>
+      <li class="nav-item"><a routerLinkActive ="active" routerLink="posts" class="nav-link">Post</a></li>
+      <li class="nav-item"><a routerLinkActive ="active" routerLink="pipe" class="nav-link">pipe</a></li>
+    </ul>
+  </nav> 
+  <!-- <app-postdetails></app-postdetails> -->
+  <!-- <app-dropdown></app-dropdown> -->
+   <!-- <app-rapidapi></app-rapidapi>
+   <app-cricbuzz></app-cricbuzz> -->
+  <!-- <div style = "text-align: center;">
+    <div class="row">
+  <div class="col md-6">
+  <app-comp1></app-comp1>
+  </div>
+  <div class="col md-6">
+  <app-comp2></app-comp2>
+  </div>
+  </div>
+   <div class="row">
+  <div class="col md-4">
+  <app-comp3></app-comp3>
+  </div>
+  <div class="col md-4">
+  <app-comp4></app-comp4>
+  </div>
+  </div>
+  </div> -->
+  <!-- <app-ngclass></app-ngclass> -->
+  
+  <app-hooks [parentData]="data" *ngIf ="isDestroy">
+  
+    <h1 #child>This is child content coming from parent component.</h1>  
+    
+    </app-hooks>
+  <button (click)="changecolor()">Change Color</button>
+  
+  <button class="btn btn-danger" (click)="onDestroy()">Destroy Hook Component</button>
+  <router-outlet></router-outlet>

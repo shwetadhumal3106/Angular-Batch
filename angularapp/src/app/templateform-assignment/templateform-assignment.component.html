@@ -1,0 +1,51 @@
+<p>templatefrom works!</p>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-left rounded shadow py-5">
+
+            <div><h2>Student Regetraction Form</h2></div>
+
+            <form #myForm="ngForm" (ngSubmit)="OnSubmit(myForm)">
+
+
+                <div class="form-group">
+                    <label for="username"> Student Full Name</label>
+                    <input required type="text" class="form-control" id="username" name="username"  ngModel placeholder="Enter username">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input required  email  type="text" class="form-control" id="email" name="email"  ngModel  placeholder="Enter email Address">
+                </div>
+
+                <div class="form-group">
+                    <label for="username">Student Conact Number</label>
+                    <input required type="text" class="form-control" id="contact number" name="contact numbers"  ngModel placeholder="Enter contact Number">
+                </div>
+
+                <div class="form-group">
+                    <label for="Collage Name">Collage Name</label>
+                    <input required type="text" class="form-control" id="collage Name" name="Collage Name"  ngModel placeholder=" Enter Collage Number">
+                </div>
+                
+                <div class="form-group">
+                    <label for="Date of Birth">Date of Birth</label>
+                    <input required type="text" class="form-control" id="Date of Birth" name="Date of Birth"  ngModel placeholder=" Enter Date of Birth">
+                </div>
+
+                <!-- <div class="form-group">
+                    <label for="Country">Country</label>
+                    <input required type="text" class="form-control" id="Country" name="Country"  ngModel placeholder="Enter Country Name">
+                </div> -->
+                
+
+                <button type="submit"   class="btn btn-success">Submit</button>
+                <button type="button" class="btn btn-info"> Clear </button>
+
+
+            </form>
+        </div>
+    </div>
+</div>
+

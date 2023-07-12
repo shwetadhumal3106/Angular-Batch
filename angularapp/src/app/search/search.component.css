@@ -1,0 +1,43 @@
+.search-button {
+    background-color: #4CAF50; /* Green background color */
+    border: none; /* Remove border */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Add some padding */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Display as inline block */
+    font-size: 16px; /* Set font size */
+    cursor: pointer; /* Add cursor pointer on hover */
+  }
+  
+  .search-button:hover {
+    background-color: #45a049; /* Darker green background color on hover */
+  }
+  
+  table {
+    width: 100%; /* Set the table width to 100% */
+    border-collapse: collapse; /* Collapse table borders */
+    margin-top: 20px; /* Add margin to the top of the table */
+    background-color: bisque;
+  }
+  
+  th, td {
+    padding: 8px; /* Add padding to table cells */
+    text-align: left; /* Align text to the left in cells */
+    border-bottom: 1px solid #ddd; /* Add bottom border to table cells */
+  }
+  
+  th {
+    background-color: #f2f2f2; /* Set background color for table header */
+    color: #333; /* Set text color for table header */
+  }
+  
+  tr:hover {
+    background-color: #f5f5f5; /* Change background color on hover */
+  }
+  
+  .no-results {
+    margin-top: 20px; /* Add margin to the top of the message */
+    color: red; /* Set text color for the "No results" message */
+  }
+  

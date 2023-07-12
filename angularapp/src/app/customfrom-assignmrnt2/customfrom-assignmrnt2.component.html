@@ -1,0 +1,76 @@
+
+<div class="container"  >
+    <div class="row justify-content-center" >
+        <div class="col-md-6 text-left rounded shadow py-5" >
+
+            <div class="class2"><h2> Template Regetraction form</h2></div>
+
+            <form #myForm="ngForm"  (ngSubmit)="OnSubmit(myForm)" class="class"  >
+                <!-- <form   #myForm="ngForm"   class="class"> -->
+
+
+        <!-- <div ngModelGroup="userDetail" #userDetail="ngModelGroup"  > -->
+                <div class="form-group" >
+                    <label for="username">Student First Name</label>
+                    <input required type="text" class="form-control"  id="username" name="username" minlength="5"  ngModel placeholder="Enter username" >
+      
+                   <div *ngIf="myForm.get('myInput').invalid && (myForm.get('myInput').dirty || myForm.get('myInput').touched)">
+                        <div *ngIf="myForm.get('myInput').errors.required">
+                          Please enter a value.
+                        </div>
+                        <div *ngIf="myForm.get('myInput').errors.minlength">
+                          Please enter at least 3 characters.
+                        </div>
+                        <div *ngIf="myForm.get('myInput').errors.maxlength">
+                          Please enter no more than 8 characters.
+                        </div>
+                      </div>
+                </div>
+                 <!-- </div>     -->
+       
+
+                <div class="form-group">
+                    <label for="lastname">Student Last Name</label>
+                    <input required type="text" class="form-control" id="lastname" name="lastname"  ngModel placeholder="Enter Last Name" >
+                    <small></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age of Student</label>
+                    <input required type="text" class="form-control" id="age" name="age"  ngModel placeholder="Enter username">
+                    <small  ></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address of Student</label>
+                    <input email required type="text" class="form-control" id="email" name="email" ngModel  placeholder="Enter email" #email="ngModel">
+                    <small class="text-danger" *ngIf="!email.valid && email.touched">Enter valid email</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="mobileNumber">Student Whatsapp Number</label>
+                    <input required type="text" class="form-control" id="mobileNumber" name="mobileNumber"  ngModel placeholder="Enter  Whatsapp Number">
+                    <small  ></small>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="course">Select Course</label>
+                    <select name="course" class="form-control" id="course" ngModel>
+                    <option [value]="course" *ngFor="let course of courseArr" >{{course}}</option>
+                    </select>
+                </div>
+
+                <div class="form-group" *ngFor="let gender of genders">
+                    <input type="radio" id="{{gender.id}}" name="gender"  value="{{gender.value}}"  class="custom-control-input" [ngModel]="defaultGenderValue" >
+                    <label for="{{gender.id}}" class="custom-control-label">{{gender.value}}</label>
+
+                </div>
+
+                <div><button type="submit" value="Submit"   class="btn btn-success">Submit</button></div>
+
+
+            </form>
+        </div>
+    </div>
+</div>

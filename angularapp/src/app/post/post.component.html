@@ -1,0 +1,23 @@
+<p>post works!</p>
+<div>
+    <div class="class">
+        <table class="table" class="class">
+            <thead>
+                <tr>
+                    <th>User Id</th>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Discription</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let show of showDetail">
+                    <td>{{show.userId}}</td>
+                    <td>{{show.id}}</td>
+                    <td>{{show.title}}</td>
+                    <td>{{show.body}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

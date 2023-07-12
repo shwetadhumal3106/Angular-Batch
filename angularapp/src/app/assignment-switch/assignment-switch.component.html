@@ -1,0 +1,45 @@
+<p>assignment-switch works!</p>
+
+<h2>Select Our Country and State</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <select class="from-control"(change)="getSelectedValue($event)">
+                <h4>-----Select a Country-----</h4>
+                <option value="Default">----Select a Country---</option>
+                <option value="India">India</option>
+                <option value="Aamerica">Aamerica</option>
+                <option value="Nepal">Nepal</option>
+            </select>
+
+        </div>
+        <div class="col-md-4">
+            <select class="from-control"(change)="getSelectedValue($event)">
+                Select a State
+                <option value="Default">----Select a State--- </option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Panjab">Panjab</option>
+                <option value="Keral">Keral</option>
+            </select>
+
+        </div>
+
+        <div class="col-md-12" [ngSwitch]="selectedValue">
+            <h2 class="text-sucess" *ngSwitchCase="'India'"></h2>
+                
+            <h2 class="text-sucess" *ngSwitchCase="'Aamerica'"></h2>
+
+            <h2 class="text-sucess" *ngSwitchCase="'Nepal'"></h2>
+        </div>
+
+        <div class="col-md-12" [ngSwitch]="selectedValue">
+            <h2 class="text-sucess" *ngSwitchCase="'Maharashtra'"></h2>
+                
+            <h2 class="text-sucess" *ngSwitchCase="'Panjab'"></h2>
+
+            <h2 class="text-sucess" *ngSwitchCase="'Keral'"></h2>
+        </div>
+
+
+    </div>
+</div>

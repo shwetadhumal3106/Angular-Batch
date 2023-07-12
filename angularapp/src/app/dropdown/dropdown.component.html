@@ -1,0 +1,36 @@
+<p>dropdown works!</p>
+<div>
+    <label for="state">State:</label>
+    <select id="state" [(ngModel)]="selectedState" (ngModelChange)="getDivisions()">
+      <option *ngFor="let state of states" [ngValue]="state">{{ state.name }}</option>
+    </select>
+  </div>
+  
+  <div>
+    <label for="division">Division:</label>
+    <select id="division" [(ngModel)]="selectedDivision" (ngModelChange)="getDistricts()">
+      <option *ngFor="let division of divisions" [ngValue]="division">{{ division.name }}</option>
+    </select>
+  </div>
+  
+  <div>
+    <label for="district">District:</label>
+    <select id="district" [(ngModel)]="selectedDistrict" (ngModelChange)="getTalukas()">
+      <option *ngFor="let district of districts" [ngValue]="district">{{ district.name }}</option>
+    </select>
+  </div>
+  
+  <div>
+    <label for="taluka">Taluka:</label>
+    <select id="taluka" [(ngModel)]="selectedTaluka" (ngModelChange)="getVillages()">
+      <option *ngFor="let taluka of talukas" [ngValue]="taluka">{{ taluka.name }}</option>
+    </select>
+  </div>
+  
+  <div>
+    <label for="village">Village:</label>
+    <select id="village" [(ngModel)]="selectedVillage">
+      <option *ngFor="let village of villages" [ngValue]="village">{{ village.name }}</option>
+    </select>
+  </div>
+  

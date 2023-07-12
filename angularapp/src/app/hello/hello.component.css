@@ -1,0 +1,13 @@
+.class{
+    background: rgb(223, 201, 105);
+}
+
+.class2{
+    background-color: paleturquoise;
+    text-align: center;
+}
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+    box-shadow: 0 0 13 purple;
+
+}

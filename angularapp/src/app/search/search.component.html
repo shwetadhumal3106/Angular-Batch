@@ -1,0 +1,23 @@
+
+<input type="text" [(ngModel)]="searchQuery" placeholder="Enter search term">
+<button class="search-button" (click)="search()" >Search</button>
+
+<table class="search-results">
+  <thead>
+    <tr>
+      
+      <th>Title</th>
+      <th>Word Count</th>
+      <th>Snippet</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let result of searchResults">
+      <td>{{ result.title }}</td>
+      <td>{{result.wordcount}}</td>
+      <td>{{ result.snippet }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- <p class="no-results" *ngIf="!searchResults || searchResults.length === 0">No results found.</p> -->
