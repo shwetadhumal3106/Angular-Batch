@@ -36,10 +36,10 @@ import { PostAssignmentComponent } from './post-assignment/post-assignment.compo
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { Todo1Component } from './todo1/todo1.component';
 import { RapidapiComponent } from './rapidapi/rapidapi.component';
-import { Com1Component } from './com1/com1.component';
-import { Com2Component } from './com2/com2.component';
-import { Com3Component } from './com3/com3.component';
-import { Com4Component } from './com4/com4.component';
+// import { Com1Component } from './com1/com1.component';
+// import { Com2Component } from './com2/com2.component';
+// import { Com3Component } from './com3/com3.component';
+// import { Com4Component } from './com4/com4.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { LoginComponent } from './login/login.component';
@@ -92,10 +92,10 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     DropdownComponent,
     Todo1Component,
     RapidapiComponent,
-    Com1Component,
-    Com2Component,
-    Com3Component,
-    Com4Component,
+    // Com1Component,
+    // Com2Component,
+    // Com3Component,
+    // Com4Component,
     AboutusComponent,
     ContactusComponent,
     LoginComponent,
